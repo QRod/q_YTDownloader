@@ -6,7 +6,7 @@ Un repositorio, dos implementaciones nativas al entorno de cada plataforma:
 | Plataforma | Código | Distribución |
 |---|---|---|
 | Windows 11 x64 | [windows/](windows/README.md), Electron | ZIP portátil con `.exe` y sus dependencias |
-| macOS Apple Silicon | [macos/](macos/README.md), SwiftUI | ZIP con `.app`, yt-dlp, FFmpeg y Node incluidos |
+| macOS 13.5+ Apple Silicon | [macos/](macos/README.md), SwiftUI | ZIP con `.app`, yt-dlp, FFmpeg y Node incluidos |
 
 Descarga los ejecutables en **Releases**. Verifica su SHA-256 con `SHA256SUMS`.
 Los binarios se publican como archivos adjuntos de la entrega, no dentro del historial Git.
@@ -15,7 +15,7 @@ Esta aplicación no se instala ni se ejecuta en el servidor de pruebas de aplica
 ## Instalar
 
 Windows: extrae todo el ZIP y abre `q_YTDownloader.exe`; conserva los demás archivos.
-macOS: descomprime y arrastra `q_YTDownloader.app` a Applications.
+macOS 13.5 o posterior (requerido por el Node incluido): descomprime y arrastra `q_YTDownloader.app` a Applications.
 La aplicación macOS se firma de forma ad hoc, sin notarización de Apple; Windows
 no tiene firma comercial. Los sistemas pueden pedir aprobación del editor.
 No se desactivan las protecciones del sistema desde los scripts de construcción.

@@ -1,6 +1,6 @@
 # q_YTDownloader
 
-Aplicación local para macOS Apple Silicon, construida con SwiftUI, yt-dlp y FFmpeg.
+Aplicación local para macOS 13.5 o posterior, Apple Silicon, construida con SwiftUI, yt-dlp y FFmpeg.
 Paquete ARM64 con motores incluidos. Arrastra la app a Applications después de descomprimir la entrega.
 
 ## Interfaz
