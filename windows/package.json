@@ -1,0 +1,13 @@
+{
+  "name": "qw-ytd",
+  "productName": "q_YTDownloader",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/main.cjs",
+  "description": "Descargador de escritorio para Windows 11",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "build:windows": "python3 scripts/build_windows.py",
+    "start": "electron ."
+  }
+}

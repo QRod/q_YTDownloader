@@ -1,0 +1,17 @@
+Bundled independent command-line engines (unmodified binaries):
+
+yt-dlp 2026.08.19: GPLv3+ binary distribution; upstream licenses included.
+Source and build instructions: https://github.com/yt-dlp/yt-dlp/tree/2026.08.19
+Source archive: https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2026.08.19.tar.gz
+
+FFmpeg 7.1 from imageio-ffmpeg 0.6.0: GPLv3+, GPL-3.0.txt included.
+FFmpeg source: https://ffmpeg.org/releases/ffmpeg-7.1.tar.xz
+Distribution and build configuration: https://github.com/imageio/imageio-ffmpeg/tree/v0.6.0/binaries
+Static binary builder: https://github.com/BtbN/FFmpeg-Builds
+
+Node.js 24.22.1: MIT and third-party notices in Node-LICENSE.
+Source: https://nodejs.org/dist/v24.22.1/node-v24.22.1.tar.gz
+
+The application and chapter processor sources accompany this release in the repository.
+The application's MIT license does not replace third-party licenses.
+Exact binary URLs and SHA256 checksums: dependencies.lock.json.

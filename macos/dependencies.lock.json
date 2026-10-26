@@ -1,0 +1,17 @@
+{
+  "ytdlp": {
+    "file": "yt-dlp_macos",
+    "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.08.19/yt-dlp_macos",
+    "sha256": "0f192b7ec147ab6288885d6351d9ab67367640029b4377576ef46dd79cf7b202"
+  },
+  "ffmpeg": {
+    "file": "imageio_ffmpeg-0.6.0-py3-none-macosx_11_0_arm64.whl",
+    "url": "https://files.pythonhosted.org/packages/40/5c/f3d8a657d362cc93b81aab8feda487317da5b5d31c0e1fdfd5e986e55d17/imageio_ffmpeg-0.6.0-py3-none-macosx_11_0_arm64.whl",
+    "sha256": "b1ae3173414b5fc5f538a726c4e48ea97edc0d2cdc11f103afee655c463fa742"
+  },
+  "node": {
+    "file": "node-v24.22.1-darwin-arm64.tar.gz",
+    "url": "https://nodejs.org/dist/v24.22.1/node-v24.22.1-darwin-arm64.tar.gz",
+    "sha256": "89c682593d76cd44233fa53b1563264e7de9cbb189cad169135c5b4fadfbc0a7"
+  }
+}

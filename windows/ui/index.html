@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>q_YTDownloader</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header><div class="brand"><span class="logo" aria-hidden="true">q↓</span><h1>q_YTDownloader</h1></div><button id="theme" class="icon" aria-label="Cambiar a tema oscuro" title="Cambiar tema">◐</button></header>
+    <main>
+      <section class="composer" aria-label="Nueva descarga">
+        <div class="toolbar">
+          <button id="paste" class="primary">＋ Pegar enlace</button>
+          <label class="select-label">Formato<select id="format"><option value="video">MP4 · Video</option><option value="audio">MP3 · Audio</option></select></label>
+          <label class="select-label" id="quality-label">Calidad<select id="quality"><option value="best">Mejor disponible</option><option value="2160">4K · 2160p</option><option value="1440">1440p</option><option value="1080">1080p</option><option value="720">720p</option><option value="480">480p</option></select></label>
+          <button id="advanced" class="quiet" aria-expanded="false">Avanzado</button>
+        </div>
+        <div id="analysis" class="analysis" hidden>
+          <div class="link-row"><input id="url" type="url" placeholder="Pega un enlace de video, lista o canal" aria-label="Enlace"><button id="analyze">Analizar</button><button id="close-analysis" aria-label="Cerrar análisis" title="Cerrar análisis">×</button></div>
+          <label id="channel-label" hidden><input id="channel-mode" type="checkbox"> Descargar canal completo</label>
+          <p id="analysis-status" role="status" aria-live="polite"></p>
+          <div id="preview" hidden><div class="preview-heading"><div><h2 id="preview-title"></h2><p id="preview-detail"></p></div><button id="download" class="primary">Descargar</button></div>
+            <div class="scope-row"><label>Descargar <select id="scope"><option value="video">Solo este video</option></select></label><span id="chapter-count"></span></div>
+          </div>
+        </div>
+        <div class="options"><label><input id="metadata" type="checkbox"> Metadatos .txt</label><label><input id="publicationDate" type="checkbox"> Fecha en nombre</label><label><input id="splitChapters" type="checkbox"> Por capítulos</label></div>
+      </section>
+      <div class="list-toolbar"><nav aria-label="Filtrar descargas"><button class="tab selected" data-tab="all">Todas</button><button class="tab" data-tab="active">En curso</button><button class="tab" data-tab="completed">Completadas</button></nav><div class="history-tools"><input id="search" type="search" placeholder="Buscar" aria-label="Buscar en historial"><button id="clear-completed" aria-label="Quitar completadas del historial" title="Quitar completadas del historial">⌫</button></div></div>
+      <p id="notice" class="notice" role="status" hidden></p>
+      <section id="downloads" aria-label="Historial de descargas"></section>
+      <div id="empty" class="empty"><span aria-hidden="true">↓</span><p>Agrega un enlace para comenzar</p></div>
+    </main>
+    <footer><button id="folder" class="folder" title="Cambiar carpeta de descargas">▱ <span id="destination"></span></button><button id="open-folder" class="folder" title="Abrir carpeta de descargas">Abrir carpeta</button><span id="summary"></span></footer>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>

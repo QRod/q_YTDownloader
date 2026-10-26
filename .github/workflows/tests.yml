@@ -1,0 +1,22 @@
+name: Verify desktop sources
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  windows-core:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '22'
+      - run: npm test --prefix windows
+      - run: python3 -m py_compile windows/scripts/build_windows.py macos/scripts/fetch_dependencies.py
+  swift-syntax:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - run: swiftc -parse macos/Sources/*.swift

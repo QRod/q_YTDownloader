@@ -1,0 +1,35 @@
+q_YTDownloader — Windows 11 x64
+
+1. Extrae TODO el ZIP a una carpeta local, por ejemplo C:\Apps\qw_YTD.
+2. Abre q_YTDownloader.exe dentro de la carpeta extraída.
+3. Pulsa Pegar enlace, revisa el análisis y pulsa Descargar.
+
+No ejecutes la app desde dentro del ZIP. Conserva todos los archivos y carpetas
+junto al ejecutable. No requiere instalar Python, Node, FFmpeg ni Electron.
+
+MP4: Canal_Título.mp4. Por capítulos: Canal_Título_Capítulo.mp4.
+MP3: Título.mp3, artista = canal.
+MP3 por capítulos: 01_Capítulo.mp3; pista = número, título = capítulo,
+artista = canal, álbum = video, ilustración = miniatura del video.
+Los capítulos se guardan en una subcarpeta y se conserva el archivo completo.
+Si falta la miniatura o no hay capítulos, se muestra un aviso.
+
+Metadatos .txt guarda descripción y demás información en un archivo UTF-8.
+Fecha en nombre añade AAAA-MM-DD_.
+Una URL con lista permite elegir video o lista completa.
+Avanzado permite analizar y descargar un canal completo.
+El botón de tema alterna claro/gris y oscuro/naranja.
+Puedes cambiar la carpeta de destino desde la barra inferior.
+Cancelar detiene la descarga y FFmpeg; Reintentar recupera tareas interrumpidas.
+Quitar elimina solo la entrada del historial, nunca tus archivos descargados.
+
+Destino inicial: %USERPROFILE%\Downloads\q_YTDownloader
+Historial y opciones: %APPDATA%\q_YTDownloader
+
+Paquete portátil sin firma de editor. Windows puede mostrar un aviso de
+SmartScreen. SHA256SUMS.json permite comprobar los archivos extraídos;
+el archivo .zip.sha256 acompaña al ZIP original.
+
+La app se ha preparado y probado con medios locales en macOS. Los ejecutables
+son para Windows x64; queda pendiente la prueba de ejecución en Windows 11.
+La disponibilidad de videos/listas/canales depende del sitio de origen.

@@ -1,0 +1,29 @@
+Este paquete incluye software de terceros sin modificaciones en sus binarios:
+
+Electron 45.0.0
+https://github.com/electron/electron/tree/v45.0.0
+Licencia MIT y licencias de Chromium incluidas en LICENSE y LICENSES.chromium.html
+en la raíz del paquete.
+
+yt-dlp 2026.10.21
+https://github.com/yt-dlp/yt-dlp/tree/2026.10.21
+El ejecutable PyInstaller incluye componentes GPLv3+ y licencias de terceros.
+Código fuente y archivos de construcción de la versión exacta:
+https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2026.10.21.tar.gz
+
+FFmpeg 7.1, distribuido por imageio-ffmpeg 0.6.0
+Licencia GPLv3+; se incluye GPL-3.0.txt.
+https://github.com/imageio/imageio-ffmpeg/tree/v0.6.0
+Distribución del binario y configuración de construcción:
+https://github.com/imageio/imageio-ffmpeg/tree/v0.6.0/binaries
+Código fuente FFmpeg 7.1: https://ffmpeg.org/releases/ffmpeg-7.1.tar.xz
+Constructor de los binarios estáticos: https://github.com/BtbN/FFmpeg-Builds
+Se incluye la información de paquete y licencia de imageio-ffmpeg.
+
+Node.js 24.22.1
+https://nodejs.org/dist/v24.22.1/
+Licencia MIT y avisos de componentes en Node-LICENSE.txt.
+Fuente: https://nodejs.org/dist/v24.22.1/node-v24.22.1.tar.gz
+
+El código de la aplicación y el procesador de capítulos están en resources/app.
+Las versiones, URLs de descarga y hashes están en dependencies.lock.json.
