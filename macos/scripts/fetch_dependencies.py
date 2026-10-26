@@ -2,6 +2,7 @@
 """Fetch pinned macOS ARM64 engines; executable bundles never depend on local paths."""
 import hashlib
 import json
+import os
 from pathlib import Path
 import shutil
 import tarfile
@@ -30,6 +31,11 @@ for name,asset in lock.items():
  if name=='node':
   with tarfile.open(target) as archive:
    for filename,output in [('node-v24.22.1-darwin-arm64/bin/node','node'),('node-v24.22.1-darwin-arm64/LICENSE','Node-LICENSE')]:
-    (cache/output).write_bytes(archive.extractfile(filename).read())
+    with archive.extractfile(filename) as source,(cache/output).open('wb') as dest:
+     shutil.copyfileobj(source,dest,1024*1024);dest.flush();os.fsync(dest.fileno())
    (cache/'node').chmod(0o755)
+for binary in ['yt-dlp','ffmpeg','node']:
+ with (cache/binary).open('rb') as stream:
+  if stream.read(4) not in (b'\xcf\xfa\xed\xfe',b'\xca\xfe\xba\xbe',b'\xbe\xba\xfe\xca'):
+   raise SystemExit('Invalid Mach-O binary after extraction: '+binary)
 print('Dependencies verified')
